@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		331FDE921B077E5500AEA539 /* EchoNest.m in Sources */ = {isa = PBXBuildFile; fileRef = 331FDE911B077E5500AEA539 /* EchoNest.m */; };
 		F361B8301B0771AD00CB75C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F361B82F1B0771AD00CB75C0 /* main.m */; };
 		F361B8331B0771AD00CB75C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F361B8321B0771AD00CB75C0 /* AppDelegate.m */; };
 		F361B8361B0771AD00CB75C0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F361B8351B0771AD00CB75C0 /* ViewController.m */; };
@@ -30,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		331FDE911B077E5500AEA539 /* EchoNest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EchoNest.m; sourceTree = "<group>"; };
+		331FDE931B077F9300AEA539 /* EchoNest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EchoNest.h; sourceTree = "<group>"; };
 		F361B82A1B0771AD00CB75C0 /* rainbowapple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rainbowapple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F361B82E1B0771AD00CB75C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F361B82F1B0771AD00CB75C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -92,6 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				F361B8311B0771AD00CB75C0 /* AppDelegate.h */,
+				331FDE911B077E5500AEA539 /* EchoNest.m */,
+				331FDE931B077F9300AEA539 /* EchoNest.h */,
 				F361B8321B0771AD00CB75C0 /* AppDelegate.m */,
 				F361B8341B0771AD00CB75C0 /* ViewController.h */,
 				F361B8351B0771AD00CB75C0 /* ViewController.m */,
@@ -241,6 +246,7 @@
 			files = (
 				F361B8361B0771AD00CB75C0 /* ViewController.m in Sources */,
 				F361B8331B0771AD00CB75C0 /* AppDelegate.m in Sources */,
+				331FDE921B077E5500AEA539 /* EchoNest.m in Sources */,
 				F361B8301B0771AD00CB75C0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,6 +454,7 @@
 				F361B84F1B0771AE00CB75C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F361B8501B0771AE00CB75C0 /* Build configuration list for PBXNativeTarget "rainbowappleTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +463,7 @@
 				F361B8521B0771AE00CB75C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
