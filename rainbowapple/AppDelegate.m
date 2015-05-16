@@ -1,5 +1,6 @@
 #import <Spotify/Spotify.h>
 #import "AppDelegate.h"
+#import "EchoNest.h"
 
 @interface AppDelegate ()
 @property (nonatomic, strong, readwrite) SPTSession *session;
@@ -8,6 +9,9 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [EchoNest searchArtistByCity:@"stockholm"];
+    
     [[SPTAuth defaultInstance] setClientID:@"4e15b6a8af1644119124bc95b57235d5"];
     [[SPTAuth defaultInstance] setRedirectURL:[NSURL URLWithString:@"rainbowapple:/callback"]];
     [[SPTAuth defaultInstance] setRequestedScopes:@[SPTAuthStreamingScope]];
