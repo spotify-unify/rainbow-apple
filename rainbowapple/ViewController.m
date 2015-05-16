@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <Spotify/Spotify.h>
 #import "AppDelegate.h"
+#import "Player.h"
 
 @interface ViewController ()
 @property (nonatomic, weak) IBOutlet UIButton *playButton;
@@ -18,8 +19,10 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    NSURL *trackURI = [NSURL URLWithString:@"spotify:track:58s6EuEYJdlb0kO7awm3Vp"];
-    [self setPlaybackContextToUri:trackURI];
+}
+
+- (void) initializePlayback{
+   
 }
 
 - (void)viewDidLoad {
@@ -32,7 +35,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)togglePlayback:(id)sender {
-    [self setPlayback:![AppDelegate sharedAppDelegate].player.isPlaying];
+    [Player setPlayback:![AppDelegate sharedAppDelegate].player.isPlaying];
 }
 
 
@@ -44,26 +47,8 @@
     }
 }
 
--(void) setPlayback:(BOOL)play {
-    __weak typeof (self) weakself = self;
-    [[AppDelegate sharedAppDelegate].player setIsPlaying:play callback:^(NSError *error) {
-        typeof (weakself) self = weakself;
-        if (error != nil) {
-            NSLog(@"*** Pausing music got error: %@", error);
-            return;
-        }
-        
-        [self updateButton];
-    }];
-}
 
--(void)setPlaybackContextToUri:(NSURL *)trackURI {
-    [[AppDelegate sharedAppDelegate].player replaceURIs:@[ trackURI ] withCurrentTrack:0 callback:^(NSError *error) {
-        if (error != nil) {
-            NSLog(@"*** Starting playback got error: %@", error);
-            return;
-        }
-    }];
-}
+
+
 
 @end

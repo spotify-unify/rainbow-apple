@@ -1,6 +1,7 @@
 #import <Spotify/Spotify.h>
 #import "AppDelegate.h"
 #import "EchoNest.h"
+#import "Player.h"
 
 @interface AppDelegate ()
 @property (nonatomic, strong, readwrite) SPTSession *session;
@@ -54,7 +55,6 @@
 }
 
 -(void)loginWithSession:(SPTSession *)session {
-    
     // Create a new player if needed
     if (self.player == nil) {
         self.player = [[SPTAudioStreamingController alloc] initWithClientId:[SPTAuth defaultInstance].clientID];
@@ -67,6 +67,9 @@
         }
         
         self.session = session;
+        NSURL *trackURI = [NSURL URLWithString:@"spotify:track:58s6EuEYJdlb0kO7awm3Vp"];
+        NSArray *uris = @[ trackURI ];
+        [Player initializePlaybackForURIs:uris];
     }];
 }
 
