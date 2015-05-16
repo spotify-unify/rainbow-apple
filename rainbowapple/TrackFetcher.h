@@ -3,7 +3,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TrackFetcher.h : NSObject
+@interface TrackFetcher : NSObject
 +(NSArray*) searchTracksByCity:(NSString*)city;
 @end
 
