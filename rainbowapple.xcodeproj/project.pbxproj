@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		04CAEDB61B07BC4F00EEEACF /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEDB51B07BC4F00EEEACF /* Player.m */; };
 		331FDE921B077E5500AEA539 /* EchoNest.m in Sources */ = {isa = PBXBuildFile; fileRef = 331FDE911B077E5500AEA539 /* EchoNest.m */; };
+		33E8E00F1B07876700A01AF5 /* TrackFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E8E00E1B07876700A01AF5 /* TrackFetcher.m */; };
 		F361B8301B0771AD00CB75C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F361B82F1B0771AD00CB75C0 /* main.m */; };
 		F361B8331B0771AD00CB75C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F361B8321B0771AD00CB75C0 /* AppDelegate.m */; };
 		F361B8361B0771AD00CB75C0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F361B8351B0771AD00CB75C0 /* ViewController.m */; };
@@ -36,6 +37,8 @@
 		04CAEDB51B07BC4F00EEEACF /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		331FDE911B077E5500AEA539 /* EchoNest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EchoNest.m; sourceTree = "<group>"; };
 		331FDE931B077F9300AEA539 /* EchoNest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EchoNest.h; sourceTree = "<group>"; };
+		33E8E00E1B07876700A01AF5 /* TrackFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackFetcher.m; sourceTree = "<group>"; };
+		33E8E0101B07878A00A01AF5 /* TrackFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackFetcher.h; sourceTree = "<group>"; };
 		F361B82A1B0771AD00CB75C0 /* rainbowapple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rainbowapple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F361B82E1B0771AD00CB75C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F361B82F1B0771AD00CB75C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -99,7 +102,9 @@
 			children = (
 				F361B8311B0771AD00CB75C0 /* AppDelegate.h */,
 				331FDE911B077E5500AEA539 /* EchoNest.m */,
+				33E8E00E1B07876700A01AF5 /* TrackFetcher.m */,
 				331FDE931B077F9300AEA539 /* EchoNest.h */,
+				33E8E0101B07878A00A01AF5 /* TrackFetcher.h */,
 				F361B8321B0771AD00CB75C0 /* AppDelegate.m */,
 				F361B8341B0771AD00CB75C0 /* ViewController.h */,
 				F361B8351B0771AD00CB75C0 /* ViewController.m */,
@@ -254,6 +259,7 @@
 				331FDE921B077E5500AEA539 /* EchoNest.m in Sources */,
 				F361B8301B0771AD00CB75C0 /* main.m in Sources */,
 				04CAEDB61B07BC4F00EEEACF /* Player.m in Sources */,
+				33E8E00F1B07876700A01AF5 /* TrackFetcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
