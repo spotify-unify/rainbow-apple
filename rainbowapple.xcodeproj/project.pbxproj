@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		041DD6D41B07C5AD000C40E1 /* Stockholm-tmp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 041DD6D31B07C5AD000C40E1 /* Stockholm-tmp.jpg */; };
+		041DD6D81B07D720000C40E1 /* plane@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 041DD6D71B07D720000C40E1 /* plane@2x.png */; };
 		04CAEDB61B07BC4F00EEEACF /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEDB51B07BC4F00EEEACF /* Player.m */; };
 		331FDE921B077E5500AEA539 /* EchoNest.m in Sources */ = {isa = PBXBuildFile; fileRef = 331FDE911B077E5500AEA539 /* EchoNest.m */; };
 		F361B8301B0771AD00CB75C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F361B82F1B0771AD00CB75C0 /* main.m */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		041DD6D31B07C5AD000C40E1 /* Stockholm-tmp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Stockholm-tmp.jpg"; sourceTree = "<group>"; };
+		041DD6D71B07D720000C40E1 /* plane@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plane@2x.png"; sourceTree = "<group>"; };
 		04CAEDB41B07BC4F00EEEACF /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		04CAEDB51B07BC4F00EEEACF /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		331FDE911B077E5500AEA539 /* EchoNest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EchoNest.m; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		041DD6D21B07C599000C40E1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				041DD6D71B07D720000C40E1 /* plane@2x.png */,
 				041DD6D31B07C5AD000C40E1 /* Stockholm-tmp.jpg */,
 			);
 			name = Resources;
@@ -244,6 +247,7 @@
 				F361B83E1B0771AD00CB75C0 /* LaunchScreen.xib in Resources */,
 				041DD6D41B07C5AD000C40E1 /* Stockholm-tmp.jpg in Resources */,
 				F361B83B1B0771AD00CB75C0 /* Images.xcassets in Resources */,
+				041DD6D81B07D720000C40E1 /* plane@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,9 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.25 green:0.75 blue:0.79 alpha:1]];
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
+
     
     [[SPTAuth defaultInstance] setClientID:@"4e15b6a8af1644119124bc95b57235d5"];
     [[SPTAuth defaultInstance] setRedirectURL:[NSURL URLWithString:@"rainbowapple:/callback"]];
