@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041DD6D41B07C5AD000C40E1 /* Stockholm-tmp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 041DD6D31B07C5AD000C40E1 /* Stockholm-tmp.jpg */; };
+		04CAEDB61B07BC4F00EEEACF /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEDB51B07BC4F00EEEACF /* Player.m */; };
 		331FDE921B077E5500AEA539 /* EchoNest.m in Sources */ = {isa = PBXBuildFile; fileRef = 331FDE911B077E5500AEA539 /* EchoNest.m */; };
+		33E8E00F1B07876700A01AF5 /* TrackFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E8E00E1B07876700A01AF5 /* TrackFetcher.m */; };
 		F361B8301B0771AD00CB75C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F361B82F1B0771AD00CB75C0 /* main.m */; };
 		F361B8331B0771AD00CB75C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F361B8321B0771AD00CB75C0 /* AppDelegate.m */; };
 		F361B8361B0771AD00CB75C0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F361B8351B0771AD00CB75C0 /* ViewController.m */; };
@@ -31,8 +34,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041DD6D31B07C5AD000C40E1 /* Stockholm-tmp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Stockholm-tmp.jpg"; sourceTree = "<group>"; };
+		04CAEDB41B07BC4F00EEEACF /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		04CAEDB51B07BC4F00EEEACF /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		331FDE911B077E5500AEA539 /* EchoNest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EchoNest.m; sourceTree = "<group>"; };
 		331FDE931B077F9300AEA539 /* EchoNest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EchoNest.h; sourceTree = "<group>"; };
+		33E8E00E1B07876700A01AF5 /* TrackFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackFetcher.m; sourceTree = "<group>"; };
+		33E8E0101B07878A00A01AF5 /* TrackFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackFetcher.h; sourceTree = "<group>"; };
 		F361B82A1B0771AD00CB75C0 /* rainbowapple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rainbowapple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F361B82E1B0771AD00CB75C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F361B82F1B0771AD00CB75C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -72,9 +80,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041DD6D21B07C599000C40E1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				041DD6D31B07C5AD000C40E1 /* Stockholm-tmp.jpg */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		F361B8211B0771AD00CB75C0 = {
 			isa = PBXGroup;
 			children = (
+				041DD6D21B07C599000C40E1 /* Resources */,
 				F361B8531B0771F900CB75C0 /* Frameworks */,
 				F361B82C1B0771AD00CB75C0 /* rainbowapple */,
 				F361B8461B0771AE00CB75C0 /* rainbowappleTests */,
@@ -95,14 +112,18 @@
 			isa = PBXGroup;
 			children = (
 				F361B8311B0771AD00CB75C0 /* AppDelegate.h */,
-				331FDE911B077E5500AEA539 /* EchoNest.m */,
-				331FDE931B077F9300AEA539 /* EchoNest.h */,
 				F361B8321B0771AD00CB75C0 /* AppDelegate.m */,
+				331FDE931B077F9300AEA539 /* EchoNest.h */,
+				331FDE911B077E5500AEA539 /* EchoNest.m */,
+				33E8E0101B07878A00A01AF5 /* TrackFetcher.h */,
+				33E8E00E1B07876700A01AF5 /* TrackFetcher.m */,
 				F361B8341B0771AD00CB75C0 /* ViewController.h */,
 				F361B8351B0771AD00CB75C0 /* ViewController.m */,
-				F361B8371B0771AD00CB75C0 /* Main.storyboard */,
+				04CAEDB41B07BC4F00EEEACF /* Player.h */,
+				04CAEDB51B07BC4F00EEEACF /* Player.m */,
 				F361B83A1B0771AD00CB75C0 /* Images.xcassets */,
 				F361B83C1B0771AD00CB75C0 /* LaunchScreen.xib */,
+				F361B8371B0771AD00CB75C0 /* Main.storyboard */,
 				F361B82D1B0771AD00CB75C0 /* Supporting Files */,
 			);
 			path = rainbowapple;
@@ -226,6 +247,7 @@
 			files = (
 				F361B8391B0771AD00CB75C0 /* Main.storyboard in Resources */,
 				F361B83E1B0771AD00CB75C0 /* LaunchScreen.xib in Resources */,
+				041DD6D41B07C5AD000C40E1 /* Stockholm-tmp.jpg in Resources */,
 				F361B83B1B0771AD00CB75C0 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +270,8 @@
 				F361B8331B0771AD00CB75C0 /* AppDelegate.m in Sources */,
 				331FDE921B077E5500AEA539 /* EchoNest.m in Sources */,
 				F361B8301B0771AD00CB75C0 /* main.m in Sources */,
+				04CAEDB61B07BC4F00EEEACF /* Player.m in Sources */,
+				33E8E00F1B07876700A01AF5 /* TrackFetcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +407,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -398,6 +423,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
