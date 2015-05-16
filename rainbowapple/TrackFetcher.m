@@ -1,10 +1,8 @@
 //
 //  TrackFetcher
 #import <Spotify/Spotify.h>
-
 #import "TrackFetcher.h"
 #import "EchoNest.h"
-
 
 
 @interface TrackFetcher ()
