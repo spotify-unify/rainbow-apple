@@ -48,6 +48,12 @@
     return NO;
 }
 
+-(NSArray *)getSongsForCity {
+    EchoNest *echoNest = [EchoNest new];
+    NSArray *uris = [echoNest searchSongByLatitude:59.3294 longitude:18.0686];
+    return uris;
+}
+
 + (instancetype)sharedAppDelegate {
     return [UIApplication sharedApplication].delegate;
 }
@@ -65,8 +71,7 @@
         }
         
         self.session = session;
-        NSURL *trackURI = [NSURL URLWithString:@"spotify:track:58s6EuEYJdlb0kO7awm3Vp"];
-        NSArray *uris = @[ trackURI ];
+        NSArray *uris = [self getSongsForCity];
         [Player initializePlaybackForURIs:uris];
     }];
 }

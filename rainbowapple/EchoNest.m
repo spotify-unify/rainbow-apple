@@ -36,7 +36,8 @@
         
         if (firstTrack != nil)
         {
-            [songs addObject:firstTrack[@"foreign_id"]];
+            NSURL * songUrl = [NSURL URLWithString:firstTrack[@"foreign_id"]];
+            [songs addObject:songUrl];
         }
         
     }

@@ -10,6 +10,7 @@
 #import <Spotify/Spotify.h>
 #import "AppDelegate.h"
 #import "Player.h"
+#import "EchoNest.h"
 
 @interface ViewController ()
 @property (nonatomic, weak) IBOutlet UIButton *playButton;

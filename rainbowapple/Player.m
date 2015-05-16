@@ -22,6 +22,15 @@
     }];
 }
 
++(void)setUrisForPlayback:(NSArray*)uris {
+    [[AppDelegate sharedAppDelegate].player replaceURIs:uris withCurrentTrack:0 callback:^(NSError *error) {
+        if(error != nil) {
+            NSLog(@"*** Replacing songs gor error: %@", error);
+            return;
+        }
+    }];
+}
+
 +(void)setPlaybackContextToUri:(NSURL *)trackURI {
     [[AppDelegate sharedAppDelegate].player replaceURIs:@[ trackURI ] withCurrentTrack:0 callback:^(NSError *error) {
         if (error != nil) {

@@ -13,4 +13,5 @@
 @interface Player : NSObject
 +(void)initializePlaybackForURIs:(NSArray*)uris;
 +(void) setPlayback:(BOOL)play;
++(void) setUrisForPlayback:(NSArray*)uris;
 @end
