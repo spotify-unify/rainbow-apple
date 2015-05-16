@@ -4,6 +4,7 @@
 #import <UIKit/UIKit.h>
 
 @interface EchoNest : NSObject
-+(NSArray*) searchArtistByCity:(NSString*)city;
+-(NSArray*) searchSongByLatitude:(double)min_latitude longitude:
+(double)min_longitude;
 @end
 
