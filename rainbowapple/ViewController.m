@@ -26,9 +26,35 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)play:(id)sender {
+- (IBAction)togglePlayback:(id)sender {
     SPTSession *session = [AppDelegate sharedAppDelegate].session;
-    [self playUsingSession:session];
+    if(self.player.isPlaying) {
+        [self pauseUsingSession:session];
+    } else {
+        [self playUsingSession:session];
+    }
+}
+
+
+- (void)updateButton {
+    if(self.player.isPlaying) {
+        [self.playButton setTitle:@"pause" forState:UIControlStateNormal];
+    } else {
+        [self.playButton setTitle:@"play" forState:UIControlStateNormal];
+    }
+}
+
+-(void) pauseUsingSession:(SPTSession *)session {
+    __weak typeof (self) weakself = self;
+    [self.player setIsPlaying:NO callback:^(NSError *error) {
+        typeof (weakself) self = weakself;
+        if (error != nil) {
+            NSLog(@"*** Pausing music got error: %@", error);
+            return;
+        }
+        
+        [self updateButton];
+    }];
 }
 
 -(void)playUsingSession:(SPTSession *)session {
@@ -50,6 +76,7 @@
                 NSLog(@"*** Starting playback got error: %@", error);
                 return;
             }
+            [self updateButton];
         }];
     }];
 }
