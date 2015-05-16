@@ -3,6 +3,7 @@
 
 @interface AppDelegate ()
 @property (nonatomic, strong, readwrite) SPTSession *session;
+@property (nonatomic, strong, readwrite) SPTAudioStreamingController *player;
 @end
 
 @implementation AppDelegate
@@ -36,8 +37,7 @@
                 NSLog(@"*** Auth error: %@", error);
                 return;
             }
-            
-            self.session = session;
+            [self loginWithSession:session];
         }];
         return YES;
     }
@@ -48,5 +48,23 @@
 + (instancetype)sharedAppDelegate {
     return [UIApplication sharedApplication].delegate;
 }
+
+-(void)loginWithSession:(SPTSession *)session {
+    
+    // Create a new player if needed
+    if (self.player == nil) {
+        self.player = [[SPTAudioStreamingController alloc] initWithClientId:[SPTAuth defaultInstance].clientID];
+    }
+    
+    [self.player loginWithSession:session callback:^(NSError *error) {
+        if (error != nil) {
+            NSLog(@"*** Logging in got error: %@", error);
+            return;
+        }
+        
+        self.session = session;
+    }];
+}
+
 
 @end

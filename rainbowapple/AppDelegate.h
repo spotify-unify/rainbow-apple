@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-@class SPTSession;
+@class SPTAudioStreamingController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (nonatomic, strong, readonly) SPTSession *session;
+@property (nonatomic, strong, readonly) SPTAudioStreamingController *player;
 + (instancetype)sharedAppDelegate;
 
 @end
