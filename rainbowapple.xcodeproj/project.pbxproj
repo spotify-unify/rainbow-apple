@@ -13,6 +13,7 @@
 		041DD6E61B088FE6000C40E1 /* play_wo_explore@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 041DD6E41B088FE6000C40E1 /* play_wo_explore@2x.png */; };
 		041DD6E81B08B216000C40E1 /* bg_w_gradient@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 041DD6E71B08B216000C40E1 /* bg_w_gradient@2x.jpg */; };
 		041DD6EA1B08B8CA000C40E1 /* plane@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 041DD6E91B08B8CA000C40E1 /* plane@2x.png */; };
+		041DD6EC1B08C306000C40E1 /* next_track@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 041DD6EB1B08C306000C40E1 /* next_track@2x.png */; };
 		04CAEDB61B07BC4F00EEEACF /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEDB51B07BC4F00EEEACF /* Player.m */; };
 		331FDE921B077E5500AEA539 /* EchoNest.m in Sources */ = {isa = PBXBuildFile; fileRef = 331FDE911B077E5500AEA539 /* EchoNest.m */; };
 		F361B8301B0771AD00CB75C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F361B82F1B0771AD00CB75C0 /* main.m */; };
@@ -44,6 +45,7 @@
 		041DD6E41B088FE6000C40E1 /* play_wo_explore@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play_wo_explore@2x.png"; sourceTree = "<group>"; };
 		041DD6E71B08B216000C40E1 /* bg_w_gradient@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bg_w_gradient@2x.jpg"; sourceTree = "<group>"; };
 		041DD6E91B08B8CA000C40E1 /* plane@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plane@2x.png"; sourceTree = "<group>"; };
+		041DD6EB1B08C306000C40E1 /* next_track@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next_track@2x.png"; sourceTree = "<group>"; };
 		04CAEDB41B07BC4F00EEEACF /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		04CAEDB51B07BC4F00EEEACF /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		331FDE911B077E5500AEA539 /* EchoNest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EchoNest.m; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				041DD6DB1B07DFE0000C40E1 /* play_w_explore@2x.png */,
 				041DD6E71B08B216000C40E1 /* bg_w_gradient@2x.jpg */,
 				041DD6E31B088FE6000C40E1 /* pause@2x.png */,
+				041DD6EB1B08C306000C40E1 /* next_track@2x.png */,
 				041DD6E91B08B8CA000C40E1 /* plane@2x.png */,
 				041DD6E41B088FE6000C40E1 /* play_wo_explore@2x.png */,
 				041DD6D91B07D8BA000C40E1 /* play@2x.png */,
@@ -262,6 +265,7 @@
 				041DD6E51B088FE6000C40E1 /* pause@2x.png in Resources */,
 				F361B83B1B0771AD00CB75C0 /* Images.xcassets in Resources */,
 				041DD6DC1B07DFE0000C40E1 /* play_w_explore@2x.png in Resources */,
+				041DD6EC1B08C306000C40E1 /* next_track@2x.png in Resources */,
 				041DD6E61B088FE6000C40E1 /* play_wo_explore@2x.png in Resources */,
 				041DD6EA1B08B8CA000C40E1 /* plane@2x.png in Resources */,
 			);

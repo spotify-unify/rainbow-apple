@@ -52,7 +52,9 @@
             return;
         }
         
-        [controller updateUI];
+        if(controller != nil) {
+            [controller updateUI];
+        }
     }];
 }
 

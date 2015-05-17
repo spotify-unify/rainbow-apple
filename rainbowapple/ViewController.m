@@ -22,7 +22,6 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self changeBgImage:@"bg_w_gradient.jpg"];
-    [self updateUI];
     self.navigationController.navigationBar.topItem.title = @"Pilgrim";
     [self.playButtonLabel setText:@"Explore"];
     [self.city setText:@"Rio De Janeiro"];
@@ -40,7 +39,6 @@
 
 - (IBAction)skipNext:(id)sender {
     [Player nextTrack:self];
-    [self updateSongLabel];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,7 +60,6 @@
         [self.playButtonLabel setText:[track name]];
     }];
 }
-
 
 - (void)updateButton {
     BOOL isPlaying = [AppDelegate sharedAppDelegate].player.isPlaying;
