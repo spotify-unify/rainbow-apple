@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="r1m-bZ-7m7">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -32,15 +33,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Stockholm-tmp.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pRx-U0-gjE">
-                                <rect key="frame" x="0.0" y="194" width="320" height="240"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="eLO-Q8-bHB"/>
-                                    <constraint firstAttribute="height" constant="240" id="p1D-Al-EMf"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stockholm-tmp.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pRx-U0-gjE">
+                                <rect key="frame" x="16" y="64" width="288" height="504"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFE-jU-cul">
+                                <rect key="frame" x="121" y="448" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stockholm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9U-xj-3uk">
+                                <rect key="frame" x="125" y="470" width="83" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOg-kA-OVZ">
-                                <rect key="frame" x="137" y="484" width="46" height="30"/>
+                                <rect key="frame" x="137" y="499" width="46" height="30"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -48,25 +57,21 @@
                                     <action selector="togglePlayback:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rhw-AA-2Wz"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFE-jU-cul">
-                                <rect key="frame" x="115" y="79" width="91" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stockholm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9U-xj-3uk">
-                                <rect key="frame" x="119" y="101" width="83" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="fOg-kA-OVZ" secondAttribute="centerX" id="Br9-ab-NoI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pRx-U0-gjE" secondAttribute="trailing" id="ENx-tP-PJQ"/>
+                            <constraint firstItem="pRx-U0-gjE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="GAl-en-wSY"/>
+                            <constraint firstItem="pRx-U0-gjE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="M22-6J-xre"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pRx-U0-gjE" secondAttribute="bottom" id="aSF-Av-eKf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pRx-U0-gjE" secondAttribute="trailing" id="c4G-dc-drF"/>
+                            <constraint firstItem="pRx-U0-gjE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uXv-C3-A2W"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="vOC-et-Yan"/>
+                    <navigationItem key="navigationItem" id="vOC-et-Yan">
+                        <barButtonItem key="rightBarButtonItem" image="plane.png" id="hfO-k7-0c2"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="playButton" destination="fOg-kA-OVZ" id="y7T-0n-Plc"/>
                     </connections>
@@ -78,10 +83,12 @@
     </scenes>
     <resources>
         <image name="Stockholm-tmp.jpg" width="1920" height="1080"/>
+        <image name="plane.png" width="28" height="28"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

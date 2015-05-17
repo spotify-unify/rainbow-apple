@@ -11,6 +11,9 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.25 green:0.75 blue:0.79 alpha:1]];
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
+
     
     [EchoNest searchArtistByCity:@"stockholm"];
     

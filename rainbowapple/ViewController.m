@@ -20,6 +20,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self updateButton];
     self.navigationController.navigationBar.topItem.title = @"AppName";
 }
 
@@ -38,6 +39,7 @@
 }
 - (IBAction)togglePlayback:(id)sender {
     [Player setPlayback:![AppDelegate sharedAppDelegate].player.isPlaying];
+    [self updateButton];
 }
 
 
