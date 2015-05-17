@@ -21,7 +21,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self updateButton];
+    [self updateButton:NO];
     self.navigationController.navigationBar.topItem.title = @"AppName";
     [self.playButtonLabel setText:@"Explore"];
 }
@@ -42,15 +42,15 @@
 }
 
 - (IBAction)togglePlayback:(id)sender {
-    [Player setPlayback:![AppDelegate sharedAppDelegate].player.isPlaying];
+    BOOL isPlaying = [AppDelegate sharedAppDelegate].player.isPlaying;
+    [Player setPlayback:!isPlaying];
     [self.playButtonLabel setText:@"Currently playing song"];
-    [self updateButton];
+    [self updateButton:!isPlaying];
 }
 
 
-- (void)updateButton {
-    
-    if([AppDelegate sharedAppDelegate].player.isPlaying) {
+- (void)updateButton:(BOOL)isPlaying {
+    if(isPlaying) {
         [self changeImageOfPlayButton:@"pause"];
     } else {
         [self changeImageOfPlayButton:@"play_wo_explore"];
