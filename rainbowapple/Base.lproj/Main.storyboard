@@ -67,6 +67,15 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhQ-Kp-oXd">
+                                <rect key="frame" x="349" y="510" width="23" height="25"/>
+                                <state key="normal" image="next_track.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="skipNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aLM-IN-52u"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -83,6 +92,8 @@
                             <constraint firstAttribute="centerX" secondItem="imy-kb-UUn" secondAttribute="centerX" id="g9c-1m-Kui"/>
                             <constraint firstItem="pRx-U0-gjE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="gts-Sr-LBG"/>
                             <constraint firstAttribute="centerX" secondItem="aBI-mN-2pj" secondAttribute="centerX" id="mmz-ZY-PFf"/>
+                            <constraint firstItem="fOg-kA-OVZ" firstAttribute="centerY" secondItem="WhQ-Kp-oXd" secondAttribute="centerY" id="rwe-g9-bpX"/>
+                            <constraint firstItem="WhQ-Kp-oXd" firstAttribute="leading" secondItem="fOg-kA-OVZ" secondAttribute="trailing" constant="15" id="uiA-9R-S2G"/>
                             <constraint firstAttribute="centerX" secondItem="imy-kb-UUn" secondAttribute="centerX" id="z31-0D-uqY"/>
                         </constraints>
                     </view>
@@ -152,6 +163,7 @@
     </scenes>
     <resources>
         <image name="bg.jpg" width="375" height="666"/>
+        <image name="next_track.png" width="23" height="25"/>
         <image name="plane.png" width="33" height="22"/>
         <image name="play_wo_explore.png" width="86" height="86"/>
     </resources>

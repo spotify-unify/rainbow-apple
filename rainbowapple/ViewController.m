@@ -22,22 +22,25 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    [self changeBgImage:@"bg_w_gradient.jpg"];
+    [self changeBgImage:@"Stockholm.jpg"];
     [self updateButton:NO];
     self.navigationController.navigationBar.topItem.title = @"Pilgrim";
     [self.playButtonLabel setText:@"Explore"];
-    [self.city setText:@"Rio De Janeiro"];
+    [self.city setText:@"Stockholm"];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
 -(void)changeBgImage:(NSString*)imageName {
     [self.background setImage:[UIImage imageNamed:imageName]];
+}
+
+- (IBAction)skipNext:(id)sender {
+    [Player nextTrack:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,7 +50,10 @@
 
 - (IBAction)togglePlayback:(id)sender {
     BOOL isPlaying = [AppDelegate sharedAppDelegate].player.isPlaying;
-    [Player setPlayback:!isPlaying];
+    [Player setPlayback:!isPlaying controller:self];
+}
+
+- (void) updateSongLabel {
     [SPTTrack trackWithURI:[Player currentlyPlayingTrack] session:[AppDelegate sharedAppDelegate].session callback:^(NSError *error, id track) {
         if(error != nil) {
             NSLog(@"*** Unable to find song name for url: %@", error);
@@ -55,12 +61,10 @@
         }
         [self.playButtonLabel setText:[track name]];
     }];
-    
-    [self updateButton:!isPlaying];
 }
 
-
-- (void)updateButton:(BOOL)isPlaying {
+- (void)updateButton {
+    BOOL isPlaying = [AppDelegate sharedAppDelegate].player.isPlaying;
     if(isPlaying) {
         [self changeImageOfPlayButton:@"pause"];
     } else {
@@ -70,6 +74,11 @@
 
 -(void)changeImageOfPlayButton:(NSString*)image {
     [self.playButton setImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
+}
+
+-(void)updateUI {
+    [self updateSongLabel];
+    [self updateButton];
 }
 
 -(void)citySelected:(NSString *)city {
