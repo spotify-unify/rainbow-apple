@@ -21,8 +21,9 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self changeBgImage:@"bg_w_gradient"];
     [self updateButton:NO];
-    self.navigationController.navigationBar.topItem.title = @"AppName";
+    self.navigationController.navigationBar.topItem.title = @"Pilgrim";
     [self.playButtonLabel setText:@"Explore"];
 }
 
@@ -34,6 +35,10 @@
     [super viewDidLoad];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+-(void)changeBgImage:(NSString*)imageName {
+    [self.background setImage:[UIImage imageNamed:imageName]];
 }
 
 - (void)didReceiveMemoryWarning {
