@@ -15,6 +15,8 @@
 //    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
     [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor colorWithRed:0.25 green:0.75 blue:0.79 alpha:1]};
     
+    [EchoNest searchArtistByCity:@"stockholm"];
+    
     [[SPTAuth defaultInstance] setClientID:@"4e15b6a8af1644119124bc95b57235d5"];
     [[SPTAuth defaultInstance] setRedirectURL:[NSURL URLWithString:@"rainbowapple:/callback"]];
     [[SPTAuth defaultInstance] setRequestedScopes:@[SPTAuthStreamingScope]];
@@ -53,8 +55,11 @@
 
 -(NSArray *)getSongsForCity {
     EchoNest *echoNest = [EchoNest new];
-    NSArray *uris = [echoNest searchSongByLatitude:59.3294 longitude:18.0686];
-    return uris;
+    
+    // Get the songs for our city. This gives us echonest Ids
+    NSArray *songsFromCity = [EchoNest searchArtistByCity:@"sheffield"];
+
+    return songsFromCity;
 }
 
 + (instancetype)sharedAppDelegate {
