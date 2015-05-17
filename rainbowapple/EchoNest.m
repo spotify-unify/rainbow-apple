@@ -11,15 +11,20 @@
 
 // Get artists from a city
 +(NSArray*) searchArtistByCity:(NSString*)city {
-
+    NSString* escapedCity = [city stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     // Get artists and their top songs for a city
-    NSString* urlString = [NSString stringWithFormat:@"%@/%@", @"http://developer.echonest.com/api/v4/artist/search?api_key=WKBSEDFABLGIDIMSK%20&format=json&results=15&bucket=id:spotify&bucket=songs&artist_location=city:", city];
+    NSString* urlString = [NSString stringWithFormat:@"http://developer.echonest.com/api/v4/artist/search?api_key=WKBSEDFABLGIDIMSK&format=json&results=15&bucket=id:spotify&bucket=songs&artist_location=%@", escapedCity];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:[NSURL URLWithString:urlString]];
     [request setHTTPMethod:@"GET"];
     
     NSURLResponse *requestResponse;
-    NSData *requestHandler = [NSURLConnection sendSynchronousRequest:request returningResponse:&requestResponse error:nil];
+    NSError *requestError;
+    NSData *requestHandler = [NSURLConnection sendSynchronousRequest:request returningResponse:&requestResponse error:&requestError];
+    if (requestError != nil) {
+        NSLog(@"%@", requestError.description);
+        return nil;
+    }
     
     NSError *localError = nil;
     NSDictionary *parsedObject = [NSJSONSerialization JSONObjectWithData:requestHandler options:0 error:&localError];
@@ -92,3 +97,4 @@
 
 
 @end
+
