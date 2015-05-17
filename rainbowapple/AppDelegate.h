@@ -16,6 +16,6 @@
 @property (nonatomic, strong, readonly) SPTAudioStreamingController *player;
 @property (nonatomic, strong, readonly) SPTSession *session;
 + (instancetype)sharedAppDelegate;
-
+- (void)playSongsForCity:(NSString*)city;
 @end
 

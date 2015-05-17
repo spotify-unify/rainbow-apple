@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "Player.h"
 #import "EchoNest.h"
+#import "CitiesTableViewController.h"
 
 @interface ViewController ()
 @property (nonatomic, weak) IBOutlet UIButton *playButton;
@@ -79,6 +80,22 @@
     [self updateButton];
 }
 
+-(void)citySelected:(NSString *)city {
+    [self.navigationController popViewControllerAnimated:YES];
+    [[AppDelegate sharedAppDelegate] playSongsForCity:city];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Make sure your segue name in storyboard is the same as this line
+    if ([[segue identifier] isEqualToString:@"citySelectionSegue"])
+    {
+        // Get reference to the destination view controller
+        CitiesTableViewController *citiesVc = [segue destinationViewController];
+        
+        citiesVc.delegate = self;
+    }
+}
 
 
 @end

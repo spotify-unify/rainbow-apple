@@ -26,6 +26,8 @@
 		F361B8551B07721200CB75C0 /* Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F361B8541B07721200CB75C0 /* Spotify.framework */; };
 		F361B8571B07731A00CB75C0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F361B8561B07731A00CB75C0 /* AVFoundation.framework */; };
 		F361B8591B07732200CB75C0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F361B8581B07732200CB75C0 /* SystemConfiguration.framework */; };
+		F3A5DB831B08B86400EF7AA2 /* CitiesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A5DB821B08B86400EF7AA2 /* CitiesTableViewController.m */; };
+		F3A5DB861B08B92400EF7AA2 /* CityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A5DB851B08B92400EF7AA2 /* CityTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,10 @@
 		F361B8541B07721200CB75C0 /* Spotify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Spotify.framework; sourceTree = "<group>"; };
 		F361B8561B07731A00CB75C0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F361B8581B07732200CB75C0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F3A5DB811B08B86400EF7AA2 /* CitiesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitiesTableViewController.h; sourceTree = "<group>"; };
+		F3A5DB821B08B86400EF7AA2 /* CitiesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitiesTableViewController.m; sourceTree = "<group>"; };
+		F3A5DB841B08B92400EF7AA2 /* CityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityTableViewCell.h; sourceTree = "<group>"; };
+		F3A5DB851B08B92400EF7AA2 /* CityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,10 @@
 				F361B83C1B0771AD00CB75C0 /* LaunchScreen.xib */,
 				F361B8371B0771AD00CB75C0 /* Main.storyboard */,
 				F361B82D1B0771AD00CB75C0 /* Supporting Files */,
+				F3A5DB811B08B86400EF7AA2 /* CitiesTableViewController.h */,
+				F3A5DB821B08B86400EF7AA2 /* CitiesTableViewController.m */,
+				F3A5DB841B08B92400EF7AA2 /* CityTableViewCell.h */,
+				F3A5DB851B08B92400EF7AA2 /* CityTableViewCell.m */,
 			);
 			path = rainbowapple;
 			sourceTree = "<group>";
@@ -285,8 +295,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3A5DB861B08B92400EF7AA2 /* CityTableViewCell.m in Sources */,
 				F361B8361B0771AD00CB75C0 /* ViewController.m in Sources */,
 				F361B8331B0771AD00CB75C0 /* AppDelegate.m in Sources */,
+				F3A5DB831B08B86400EF7AA2 /* CitiesTableViewController.m in Sources */,
 				331FDE921B077E5500AEA539 /* EchoNest.m in Sources */,
 				F361B8301B0771AD00CB75C0 /* main.m in Sources */,
 				04CAEDB61B07BC4F00EEEACF /* Player.m in Sources */,

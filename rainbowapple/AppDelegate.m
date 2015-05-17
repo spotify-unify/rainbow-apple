@@ -51,9 +51,10 @@
     return NO;
 }
 
--(NSArray *)getSongsForCity {
+-(NSArray *)getSongsForCity:(NSString*)city {
+    EchoNest *echoNest = [EchoNest new];
     // Get the songs for our city. This gives us echonest Ids
-    NSArray *songsFromCity = [EchoNest searchArtistByCity:@"new york"];
+    NSArray *songsFromCity = [EchoNest searchArtistByCity:city];
     NSArray* shuffledSongs = [self shuffleSongs:[songsFromCity mutableCopy]];
     return shuffledSongs;
 }
@@ -84,9 +85,13 @@
         }
         
         self.session = session;
-        NSArray *uris = [self getSongsForCity];
-        [Player initializePlaybackForURIs:uris];
+        [self playSongsForCity:@"Stockholm"];
     }];
+}
+
+-(void)playSongsForCity:(NSString*)city {
+    NSArray *uris = [self getSongsForCity:city];
+    [Player initializePlaybackForURIs:uris];
 }
 
 
