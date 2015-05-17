@@ -227,9 +227,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F361B8291B0771AD00CB75C0 /* rainbowapple */ = {
+		F361B8291B0771AD00CB75C0 /* Pilgrim */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F361B84D1B0771AE00CB75C0 /* Build configuration list for PBXNativeTarget "rainbowapple" */;
+			buildConfigurationList = F361B84D1B0771AE00CB75C0 /* Build configuration list for PBXNativeTarget "Pilgrim" */;
 			buildPhases = (
 				F361B8261B0771AD00CB75C0 /* Sources */,
 				F361B8271B0771AD00CB75C0 /* Frameworks */,
@@ -239,7 +239,7 @@
 			);
 			dependencies = (
 			);
-			name = rainbowapple;
+			name = Pilgrim;
 			productName = rainbowapple;
 			productReference = F361B82A1B0771AD00CB75C0 /* rainbowapple.app */;
 			productType = "com.apple.product-type.application";
@@ -293,7 +293,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F361B8291B0771AD00CB75C0 /* rainbowapple */,
+				F361B8291B0771AD00CB75C0 /* Pilgrim */,
 				F361B8421B0771AE00CB75C0 /* rainbowappleTests */,
 			);
 		};
@@ -366,7 +366,7 @@
 /* Begin PBXTargetDependency section */
 		F361B8451B0771AE00CB75C0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F361B8291B0771AD00CB75C0 /* rainbowapple */;
+			target = F361B8291B0771AD00CB75C0 /* Pilgrim */;
 			targetProxy = F361B8441B0771AE00CB75C0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -551,7 +551,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F361B84D1B0771AE00CB75C0 /* Build configuration list for PBXNativeTarget "rainbowapple" */ = {
+		F361B84D1B0771AE00CB75C0 /* Build configuration list for PBXNativeTarget "Pilgrim" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F361B84E1B0771AE00CB75C0 /* Debug */,
