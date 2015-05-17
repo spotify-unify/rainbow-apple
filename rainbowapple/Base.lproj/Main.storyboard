@@ -21,10 +21,10 @@
             </objects>
             <point key="canvasLocation" x="-598.39999999999998" y="106.02666666666667"/>
         </scene>
-        <!--awesome-->
+        <!--Pilgrim-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="awesome" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="Pilgrim" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -33,24 +33,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stockholm-tmp.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pRx-U0-gjE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pRx-U0-gjE">
                                 <rect key="frame" x="16" y="64" width="288" height="504"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFE-jU-cul">
-                                <rect key="frame" x="121" y="448" width="91" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Welcome To" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKC-qX-R0S">
+                                <rect key="frame" x="84" y="388" width="154" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stockholm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9U-xj-3uk">
-                                <rect key="frame" x="125" y="470" width="83" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Rio De Janerio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imy-kb-UUn">
+                                <rect key="frame" x="31" y="410" width="261" height="44"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOg-kA-OVZ">
-                                <rect key="frame" x="137" y="499" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Explore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBI-mN-2pj">
+                                <rect key="frame" x="16" y="518" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.25098039215686274" green="0.75294117647058822" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOg-kA-OVZ">
+                                <rect key="frame" x="145" y="473" width="32" height="37"/>
+                                <state key="normal" image="play_wo_explore.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -60,10 +66,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="imy-kb-UUn" secondAttribute="centerX" id="Ayg-fp-5PY"/>
                             <constraint firstAttribute="centerX" secondItem="fOg-kA-OVZ" secondAttribute="centerX" id="Br9-ab-NoI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pRx-U0-gjE" secondAttribute="trailing" id="ENx-tP-PJQ"/>
                             <constraint firstItem="pRx-U0-gjE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="GAl-en-wSY"/>
                             <constraint firstItem="pRx-U0-gjE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="M22-6J-xre"/>
+                            <constraint firstAttribute="centerX" secondItem="lKC-qX-R0S" secondAttribute="centerX" id="a2a-bK-no6"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pRx-U0-gjE" secondAttribute="bottom" id="aSF-Av-eKf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pRx-U0-gjE" secondAttribute="trailing" id="c4G-dc-drF"/>
                             <constraint firstItem="pRx-U0-gjE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uXv-C3-A2W"/>
@@ -74,6 +82,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="playButton" destination="fOg-kA-OVZ" id="y7T-0n-Plc"/>
+                        <outlet property="playButtonLabel" destination="aBI-mN-2pj" id="HpW-OV-SxR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -82,8 +91,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Stockholm-tmp.jpg" width="1920" height="1080"/>
+        <image name="bg.jpg" width="375" height="666"/>
         <image name="plane.png" width="28" height="28"/>
+        <image name="play_wo_explore.png" width="86" height="86"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

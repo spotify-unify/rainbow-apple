@@ -14,6 +14,7 @@
 
 @interface ViewController ()
 @property (nonatomic, weak) IBOutlet UIButton *playButton;
+@property (nonatomic, weak) IBOutlet UILabel *playButtonLabel;
 @end
 
 @implementation ViewController
@@ -22,6 +23,7 @@
     [super viewWillAppear:animated];
     [self updateButton];
     self.navigationController.navigationBar.topItem.title = @"AppName";
+    [self.playButtonLabel setText:@"Explore"];
 }
 
 - (void) initializePlayback{
@@ -30,6 +32,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -37,18 +40,25 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (IBAction)togglePlayback:(id)sender {
     [Player setPlayback:![AppDelegate sharedAppDelegate].player.isPlaying];
+    [self.playButtonLabel setText:@"Currently playing song"];
     [self updateButton];
 }
 
 
 - (void)updateButton {
+    
     if([AppDelegate sharedAppDelegate].player.isPlaying) {
-        [self.playButton setTitle:@"pause" forState:UIControlStateNormal];
+        [self changeImageOfPlayButton:@"pause"];
     } else {
-        [self.playButton setTitle:@"play" forState:UIControlStateNormal];
+        [self changeImageOfPlayButton:@"play_wo_explore"];
     }
+}
+
+-(void)changeImageOfPlayButton:(NSString*)image {
+    [self.playButton setImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
 }
 
 
