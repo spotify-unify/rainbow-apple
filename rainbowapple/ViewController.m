@@ -21,7 +21,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self changeBgImage:@"bg_w_gradient"];
+    [self changeBgImage:@"bg_w_gradient.jpg"];
     [self updateButton:NO];
     self.navigationController.navigationBar.topItem.title = @"Pilgrim";
     [self.playButtonLabel setText:@"Explore"];
