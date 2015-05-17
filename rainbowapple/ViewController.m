@@ -44,7 +44,14 @@
 - (IBAction)togglePlayback:(id)sender {
     BOOL isPlaying = [AppDelegate sharedAppDelegate].player.isPlaying;
     [Player setPlayback:!isPlaying];
-    [self.playButtonLabel setText:@"Currently playing song"];
+    [SPTTrack trackWithURI:[Player currentlyPlayingTrack] session:[AppDelegate sharedAppDelegate].session callback:^(NSError *error, id track) {
+        if(error != nil) {
+            NSLog(@"*** Unable to find song name for url: %@", error);
+            return;
+        }
+        [self.playButtonLabel setText:[track name]];
+    }];
+    
     [self updateButton:!isPlaying];
 }
 

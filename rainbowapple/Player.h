@@ -14,4 +14,5 @@
 +(void)initializePlaybackForURIs:(NSArray*)uris;
 +(void) setPlayback:(BOOL)play;
 +(void) setUrisForPlayback:(NSArray*)uris;
++(NSURL*) currentlyPlayingTrack;
 @end
