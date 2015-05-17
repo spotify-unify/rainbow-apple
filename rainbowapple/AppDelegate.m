@@ -12,6 +12,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    [EchoNest searchArtistByCity:@"stockholm"];
+    
     [[SPTAuth defaultInstance] setClientID:@"4e15b6a8af1644119124bc95b57235d5"];
     [[SPTAuth defaultInstance] setRedirectURL:[NSURL URLWithString:@"rainbowapple:/callback"]];
     [[SPTAuth defaultInstance] setRequestedScopes:@[SPTAuthStreamingScope]];
@@ -50,7 +52,7 @@
 
 -(NSArray *)getSongsForCity {
     EchoNest *echoNest = [EchoNest new];
-    NSArray *uris = [echoNest searchSongByLatitude:59.3294 longitude:18.0686];
+    //NSArray *uris = [echoNest searchSongByLatitude:59.3294 longitude:18.0686];
     return uris;
 }
 

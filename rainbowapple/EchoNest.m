@@ -9,12 +9,11 @@
 
 @implementation EchoNest
 
-// Function to query EchoNest API and return songs, given a location
-//+(NSArray*) searchSongByLocation:(double)min_latitude : (double)min_longitude {
--(NSArray*) searchSongByLatitude:(double)min_latitude longitude:
-(double)min_longitude {
+// Get artists from a city
++(NSArray*) searchArtistByCity:(NSString*)city {
 
-    NSString* urlString = [NSString stringWithFormat:@"http://developer.echonest.com/api/v4/song/search?api_key=WKBSEDFABLGIDIMSK&format=json&results=15&min_latitude=%f&min_longitude=%f&bucket=id:spotify&bucket=audio_summary&bucket=tracks", min_latitude, min_longitude];
+    // Get artists and their top songs for a city
+    NSString* urlString = [NSString stringWithFormat:@"%@/%@", @"http://developer.echonest.com/api/v4/artist/search?api_key=WKBSEDFABLGIDIMSK%20&format=json&results=15&bucket=id:spotify&bucket=songs&artist_location=city:", city];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:[NSURL URLWithString:urlString]];
     [request setHTTPMethod:@"GET"];
@@ -25,27 +24,51 @@
     NSError *localError = nil;
     NSDictionary *parsedObject = [NSJSONSerialization JSONObjectWithData:requestHandler options:0 error:&localError];
     
-    /* Get the songs from the echonest data */
-    NSArray* songsData = [parsedObject valueForKeyPath:@"response.songs"];
-    NSMutableArray* songs = [NSMutableArray new];
+    // Get the artists (and their songs)
+    NSArray* artistsData = [[parsedObject valueForKey:@"response"] valueForKey:@"artists"];
     
-    /* For each song, add their name to a new array */
-    for (NSDictionary* dict in songsData) {
-        NSArray *tracks = dict[@"tracks"];
-        NSDictionary *firstTrack = tracks.firstObject;
+    
+    // Create an array for top songs
+    NSMutableArray* topSongs = [NSMutableArray new];
+    
+    // Loop through artists data
+    for (NSDictionary* artistData in artistsData) {
         
-        if (firstTrack != nil)
-        {
-            NSURL * songUrl = [NSURL URLWithString:firstTrack[@"foreign_id"]];
-            [songs addObject:songUrl];
-        }
+        // They have multiple songs, so we need to pick the first
+        NSArray *songs = artistData[@"songs"];
+        NSDictionary *firstSong = songs.firstObject;
         
+        // Add their top song ID to an array. We're adding their ECHONEST id to our array
+        [topSongs addObject:[firstSong valueForKey:@"id"]];
+    }
+
+    return artists;
+}
+                            
+// get spotify ID for a song, returns array of spotify song ids
++(NSArray*) searchSongBySongId:(NSString*)songId {
+    
+    NSString* urlString = [NSString stringWithFormat:@"%@/%@", @"http://developer.echonest.com/api/v4/song/profile?api_key=WKBSEDFABLGIDIMSK&format=json&id=SOWSUIP13DBDB01AE7&bucket=tracks&bucket=id%3Aspotify-WW&:", songId];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:[NSURL URLWithString:urlString]];
+    [request setHTTPMethod:@"GET"];
+    
+    NSURLResponse *requestResponse;
+    NSData *requestHandler = [NSURLConnection sendSynchronousRequest:request returningResponse:&requestResponse error:nil];
+    
+    NSError *localError = nil;
+    NSDictionary *parsedObject = [NSJSONSerialization JSONObjectWithData:requestHandler options:0 error:&localError];
+    NSArray* songData = [parsedObject valueForKey:@"response"];
+
+    NSArray *tracks = dict[@"tracks"];
+    NSDictionary *firstTrack = tracks.firstObject;
+    
+    if (firstTrack != nil)
+    {
+        NSURL * songUrl = [NSURL URLWithString:firstTrack[@"foreign_id"]];
     }
     
-    /* Print array */
-    NSLog(@"songs = %@", songs);
-
-    return songs;
+    return songUrl;
 }
 
 
