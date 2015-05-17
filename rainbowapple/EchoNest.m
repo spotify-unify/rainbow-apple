@@ -38,17 +38,27 @@
         NSArray *songs = artistData[@"songs"];
         NSDictionary *firstSong = songs.firstObject;
         
-        // Add their top song ID to an array. We're adding their ECHONEST id to our array
-        [topSongs addObject:[firstSong valueForKey:@"id"]];
+        // We've got the echonestId for the song now
+        NSString *echoNestId = [firstSong valueForKey:@"id"];
+        
+        // We just need to get the spotify song ID now using our other function
+        NSString *spotifyUri = [self getSpotifyUriForSong:echoNestId];
+        
+        if (spotifyUri != nil)
+        {
+            // add this to our array
+            [topSongs addObject:spotifyUri];
+        }
     }
 
     return topSongs;
 }
                             
-/*get spotify ID for a song, returns array of spotify song ids
-+(NSArray*) searchSongBySongId:(NSString*)songId {
+//get spotify ID for a song, returns array of spotify song ids
++(NSURL*) getSpotifyUriForSong:(NSString*)songId {
     
-    NSString* urlString = [NSString stringWithFormat:@"%@/%@", @"http://developer.echonest.com/api/v4/song/profile?api_key=WKBSEDFABLGIDIMSK&format=json&id=SOWSUIP13DBDB01AE7&bucket=tracks&bucket=id%3Aspotify-WW&:", songId];
+    // Create request URL
+    NSString* urlString = [NSString stringWithFormat:@"http://developer.echonest.com/api/v4/song/profile?api_key=WKBSEDFABLGIDIMSK&format=json&bucket=tracks&bucket=id:spotify-WW&id=%@", songId];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:[NSURL URLWithString:urlString]];
     [request setHTTPMethod:@"GET"];
@@ -58,18 +68,27 @@
     
     NSError *localError = nil;
     NSDictionary *parsedObject = [NSJSONSerialization JSONObjectWithData:requestHandler options:0 error:&localError];
-    NSArray* songData = [parsedObject valueForKey:@"response"];
-
-    NSArray *tracks = dict[@"tracks"];
-    NSDictionary *firstTrack = tracks.firstObject;
     
-    if (firstTrack != nil)
+    // Get the song data
+    NSArray* songData = [[[parsedObject valueForKey:@"response"] valueForKey:@"songs"] valueForKey:@"tracks"];
+    
+    // We only care about the first track, so extract tha
+    NSURL *songUrl = nil;
+    
+    // First check if there are any tracks
+    if ([[songData objectAtIndex:0] count] != 0)
     {
-        NSURL * songUrl = [NSURL URLWithString:firstTrack[@"foreign_id"]];
+        NSDictionary *firstTrack = [[songData objectAtIndex:0] objectAtIndex:0];
+        
+        if (firstTrack != nil)
+        {
+            songUrl = [NSURL URLWithString:firstTrack[@"foreign_id"]];
+        }
     }
     
+    
     return songUrl;
-}*/
+}
 
 
 @end
