@@ -21,8 +21,9 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self changeBgImage:@"bg_w_gradient"];
     [self updateButton:NO];
-    self.navigationController.navigationBar.topItem.title = @"AppName";
+    self.navigationController.navigationBar.topItem.title = @"Pilgrim";
     [self.playButtonLabel setText:@"Explore"];
 }
 
@@ -36,6 +37,10 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+-(void)changeBgImage:(NSString*)imageName {
+    [self.background setImage:[UIImage imageNamed:imageName]];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -44,7 +49,14 @@
 - (IBAction)togglePlayback:(id)sender {
     BOOL isPlaying = [AppDelegate sharedAppDelegate].player.isPlaying;
     [Player setPlayback:!isPlaying];
-    [self.playButtonLabel setText:@"Currently playing song"];
+    [SPTTrack trackWithURI:[Player currentlyPlayingTrack] session:[AppDelegate sharedAppDelegate].session callback:^(NSError *error, id track) {
+        if(error != nil) {
+            NSLog(@"*** Unable to find song name for url: %@", error);
+            return;
+        }
+        [self.playButtonLabel setText:[track name]];
+    }];
+    
     [self updateButton:!isPlaying];
 }
 

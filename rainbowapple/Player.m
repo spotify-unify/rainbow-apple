@@ -31,6 +31,10 @@
     }];
 }
 
++(NSURL*)currentlyPlayingTrack {
+    return [[AppDelegate sharedAppDelegate].player currentTrackURI];
+}
+
 +(void)setPlaybackContextToUri:(NSURL *)trackURI {
     [[AppDelegate sharedAppDelegate].player replaceURIs:@[ trackURI ] withCurrentTrack:0 callback:^(NSError *error) {
         if (error != nil) {
