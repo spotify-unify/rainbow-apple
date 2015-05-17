@@ -22,7 +22,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self changeBgImage:@"bg_w_gradient.jpg"];
-    [self updateButton:NO];
+    [self updateUI];
     self.navigationController.navigationBar.topItem.title = @"Pilgrim";
     [self.playButtonLabel setText:@"Explore"];
     [self.city setText:@"Rio De Janeiro"];
@@ -38,6 +38,11 @@
     [self.background setImage:[UIImage imageNamed:imageName]];
 }
 
+- (IBAction)skipNext:(id)sender {
+    [Player nextTrack:self];
+    [self updateSongLabel];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -45,7 +50,10 @@
 
 - (IBAction)togglePlayback:(id)sender {
     BOOL isPlaying = [AppDelegate sharedAppDelegate].player.isPlaying;
-    [Player setPlayback:!isPlaying];
+    [Player setPlayback:!isPlaying controller:self];
+}
+
+- (void) updateSongLabel {
     [SPTTrack trackWithURI:[Player currentlyPlayingTrack] session:[AppDelegate sharedAppDelegate].session callback:^(NSError *error, id track) {
         if(error != nil) {
             NSLog(@"*** Unable to find song name for url: %@", error);
@@ -53,12 +61,11 @@
         }
         [self.playButtonLabel setText:[track name]];
     }];
-    
-    [self updateButton:!isPlaying];
 }
 
 
-- (void)updateButton:(BOOL)isPlaying {
+- (void)updateButton {
+    BOOL isPlaying = [AppDelegate sharedAppDelegate].player.isPlaying;
     if(isPlaying) {
         [self changeImageOfPlayButton:@"pause"];
     } else {
@@ -70,7 +77,10 @@
     [self.playButton setImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
 }
 
-
+-(void)updateUI {
+    [self updateSongLabel];
+    [self updateButton];
+}
 
 
 

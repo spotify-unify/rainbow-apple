@@ -10,9 +10,12 @@
 #import "AppDelegate.h"
 #import <UIKit/UIKit.h>
 
+@class ViewController;
+
 @interface Player : NSObject
 +(void)initializePlaybackForURIs:(NSArray*)uris;
-+(void) setPlayback:(BOOL)play;
++(void) setPlayback:(BOOL)play controller:(ViewController*) controller;
 +(void) setUrisForPlayback:(NSArray*)uris;
 +(NSURL*) currentlyPlayingTrack;
++(void) nextTrack:(ViewController*) controller;
 @end

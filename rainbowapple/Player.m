@@ -8,6 +8,7 @@
 
 #import "Player.h"
 #import <Spotify/Spotify.h>
+#import "ViewController.h"
 
 @implementation Player
 
@@ -18,7 +19,7 @@
             return;
         }
         
-        [Player setPlayback:NO];
+        [Player setPlayback:NO controller:nil];
     }];
 }
 
@@ -44,11 +45,26 @@
     }];
 }
 
-+(void) setPlayback:(BOOL)play {
++(void)nextTrack:(ViewController *) controller {
+    [[AppDelegate sharedAppDelegate].player skipNext:^(NSError *error) {
+        if(error != nil) {
+            NSLog(@"*** Skipping to next song got error: %@", error);
+            return;
+        }
+        
+        [controller updateUI];
+    }];
+}
+
++(void) setPlayback:(BOOL)play controller:(ViewController *) controller {
     [[AppDelegate sharedAppDelegate].player setIsPlaying:play callback:^(NSError *error) {
         if (error != nil) {
             NSLog(@"*** Pausing music got error: %@", error);
             return;
+        }
+        
+        if(controller != nil) {
+            [controller updateUI];
         }
     }];
 }
