@@ -85,13 +85,13 @@
         }
         
         self.session = session;
-        [self playSongsForCity:@"Stockholm"];
+        [self playSongsForCity:@"Stockholm" shouldPause:YES controller:nil];
     }];
 }
 
--(void)playSongsForCity:(NSString*)city {
+-(void)playSongsForCity:(NSString*)city shouldPause:(BOOL)shouldPause controller:(ViewController*)controller{
     NSArray *uris = [self getSongsForCity:city];
-    [Player initializePlaybackForURIs:uris];
+    [Player initializePlaybackForURIs:uris shouldPause:shouldPause controller:controller];
 }
 
 

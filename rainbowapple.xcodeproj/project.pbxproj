@@ -16,6 +16,7 @@
 		041DD6EC1B08C306000C40E1 /* next_track@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 041DD6EB1B08C306000C40E1 /* next_track@2x.png */; };
 		04CAEDB61B07BC4F00EEEACF /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEDB51B07BC4F00EEEACF /* Player.m */; };
 		331FDE921B077E5500AEA539 /* EchoNest.m in Sources */ = {isa = PBXBuildFile; fileRef = 331FDE911B077E5500AEA539 /* EchoNest.m */; };
+		F34457F21B08CCC000062EEC /* Seattle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F34457F11B08CCC000062EEC /* Seattle.jpg */; };
 		F361B8301B0771AD00CB75C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F361B82F1B0771AD00CB75C0 /* main.m */; };
 		F361B8331B0771AD00CB75C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F361B8321B0771AD00CB75C0 /* AppDelegate.m */; };
 		F361B8361B0771AD00CB75C0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F361B8351B0771AD00CB75C0 /* ViewController.m */; };
@@ -63,6 +64,7 @@
 		04CAEDB51B07BC4F00EEEACF /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		331FDE911B077E5500AEA539 /* EchoNest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EchoNest.m; sourceTree = "<group>"; };
 		331FDE931B077F9300AEA539 /* EchoNest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EchoNest.h; sourceTree = "<group>"; };
+		F34457F11B08CCC000062EEC /* Seattle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Seattle.jpg; sourceTree = "<group>"; };
 		F361B82A1B0771AD00CB75C0 /* rainbowapple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rainbowapple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F361B82E1B0771AD00CB75C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F361B82F1B0771AD00CB75C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 		041DD6D21B07C599000C40E1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F34457F11B08CCC000062EEC /* Seattle.jpg */,
 				F3DBD8CC1B08C52300192DCD /* Barcelona.jpg */,
 				F3DBD8CD1B08C52300192DCD /* Copenhagen.jpg */,
 				F3DBD8CE1B08C52300192DCD /* Los Angeles.jpg */,
@@ -313,6 +316,7 @@
 				F361B83B1B0771AD00CB75C0 /* Images.xcassets in Resources */,
 				041DD6DC1B07DFE0000C40E1 /* play_w_explore@2x.png in Resources */,
 				F3DBD8DA1B08C52300192DCD /* Moscow.jpg in Resources */,
+				F34457F21B08CCC000062EEC /* Seattle.jpg in Resources */,
 				F3DBD8E01B08C52300192DCD /* Sydney.jpg in Resources */,
 				F3DBD8D91B08C52300192DCD /* Los Angeles.jpg in Resources */,
 				F3DBD8DB1B08C52300192DCD /* Paris.jpg in Resources */,

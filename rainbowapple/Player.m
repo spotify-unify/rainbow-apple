@@ -12,25 +12,20 @@
 
 @implementation Player
 
-+(void)initializePlaybackForURIs:(NSArray*)uris {
++(void)initializePlaybackForURIs:(NSArray*)uris shouldPause:(BOOL)pause controller:(ViewController *) controller{
     [[AppDelegate sharedAppDelegate].player playURIs:uris fromIndex:0 callback:^(NSError *error) {
         if(error != nil) {
             NSLog(@"*** Playing music got error: %@", error);
             return;
         }
-        
-        [Player setPlayback:NO controller:nil];
-    }];
-}
-
-+(void)setUrisForPlayback:(NSArray*)uris {
-    [[AppDelegate sharedAppDelegate].player replaceURIs:uris withCurrentTrack:0 callback:^(NSError *error) {
-        if(error != nil) {
-            NSLog(@"*** Replacing songs gor error: %@", error);
-            return;
+        if (pause) {
+          [Player setPlayback:NO controller:nil];
+        } else {
+            [Player setPlayback:YES controller:nil];
         }
     }];
 }
+
 
 +(NSURL*)currentlyPlayingTrack {
     return [[AppDelegate sharedAppDelegate].player currentTrackURI];
@@ -53,7 +48,9 @@
         }
         
         if(controller != nil) {
-            [controller updateUI];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [controller updateUI];
+            });
         }
     }];
 }
@@ -65,9 +62,9 @@
             return;
         }
         
-        if(controller != nil) {
+        dispatch_async(dispatch_get_main_queue(), ^{
             [controller updateUI];
-        }
+        });
     }];
 }
 

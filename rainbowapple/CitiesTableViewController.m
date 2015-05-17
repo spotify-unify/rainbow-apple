@@ -77,7 +77,7 @@
             break;
         case 5:
             [cityData setObject:@"Seoul" forKey:@"city"];
-            [cityData setObject:@"Sweden" forKey:@"country"];
+            [cityData setObject:@"South Korea" forKey:@"country"];
             break;
         case 6:
             [cityData setObject:@"Sydney" forKey:@"city"];

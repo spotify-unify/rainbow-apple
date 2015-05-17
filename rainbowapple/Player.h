@@ -15,7 +15,7 @@
 @interface Player : NSObject
 +(void)initializePlaybackForURIs:(NSArray*)uris;
 +(void) setPlayback:(BOOL)play controller:(ViewController*) controller;
-+(void) setUrisForPlayback:(NSArray*)uris;
++(void)initializePlaybackForURIs:(NSArray*)uris shouldPause:(BOOL)pause controller:(ViewController *) controller;
 +(NSURL*) currentlyPlayingTrack;
 +(void) nextTrack:(ViewController*) controller;
 @end

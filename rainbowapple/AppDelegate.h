@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 @class SPTAudioStreamingController;
 @class SPTSession;
+@class ViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -16,6 +17,6 @@
 @property (nonatomic, strong, readonly) SPTAudioStreamingController *player;
 @property (nonatomic, strong, readonly) SPTSession *session;
 + (instancetype)sharedAppDelegate;
-- (void)playSongsForCity:(NSString*)city;
+-(void)playSongsForCity:(NSString*)city shouldPause:(BOOL)shouldPause controller:(ViewController*)controller;
 @end
 

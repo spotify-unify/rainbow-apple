@@ -22,13 +22,14 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self updateButton];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     [self changeBgImage:@"Stockholm.jpg"];
-    [self updateButton:NO];
+    [self updateButton];
     self.navigationController.navigationBar.topItem.title = @"Pilgrim";
     [self.playButtonLabel setText:@"Explore"];
     [self.city setText:@"Stockholm"];
@@ -59,7 +60,9 @@
             NSLog(@"*** Unable to find song name for url: %@", error);
             return;
         }
-        [self.playButtonLabel setText:[track name]];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.playButtonLabel setText:[track name]];
+        });
     }];
 }
 
@@ -90,7 +93,7 @@
     });
     
     [self.navigationController popViewControllerAnimated:YES];
-    [[AppDelegate sharedAppDelegate] playSongsForCity:city];
+    [[AppDelegate sharedAppDelegate] playSongsForCity:city shouldPause:NO controller:self];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
