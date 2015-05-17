@@ -11,9 +11,9 @@
 
 // Get artists from a city
 +(NSArray*) searchArtistByCity:(NSString*)city {
-
+    
     // Get artists and their top songs for a city
-    NSString* urlString = [NSString stringWithFormat:@"%@/%@", @"http://developer.echonest.com/api/v4/artist/search?api_key=WKBSEDFABLGIDIMSK%20&format=json&results=15&bucket=id:spotify&bucket=songs&artist_location=city:", city];
+    NSString* urlString = [NSString stringWithFormat:@"http://developer.echonest.com/api/v4/artist/search?api_key=WKBSEDFABLGIDIMSK&format=json&results=15&bucket=id:spotify&bucket=songs&artist_location=%@", city];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:[NSURL URLWithString:urlString]];
     [request setHTTPMethod:@"GET"];

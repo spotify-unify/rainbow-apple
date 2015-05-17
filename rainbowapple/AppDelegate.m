@@ -57,7 +57,7 @@
     EchoNest *echoNest = [EchoNest new];
     
     // Get the songs for our city. This gives us echonest Ids
-    NSArray *songsFromCity = [EchoNest searchArtistByCity:@"sheffield"];
+    NSArray *songsFromCity = [EchoNest searchArtistByCity:@"london"];
 
     return songsFromCity;
 }
