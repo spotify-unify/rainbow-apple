@@ -42,10 +42,10 @@
         [topSongs addObject:[firstSong valueForKey:@"id"]];
     }
 
-    return artists;
+    return topSongs;
 }
                             
-// get spotify ID for a song, returns array of spotify song ids
+/*get spotify ID for a song, returns array of spotify song ids
 +(NSArray*) searchSongBySongId:(NSString*)songId {
     
     NSString* urlString = [NSString stringWithFormat:@"%@/%@", @"http://developer.echonest.com/api/v4/song/profile?api_key=WKBSEDFABLGIDIMSK&format=json&id=SOWSUIP13DBDB01AE7&bucket=tracks&bucket=id%3Aspotify-WW&:", songId];
@@ -69,7 +69,7 @@
     }
     
     return songUrl;
-}
+}*/
 
 
 @end

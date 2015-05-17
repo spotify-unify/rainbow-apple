@@ -52,8 +52,11 @@
 
 -(NSArray *)getSongsForCity {
     EchoNest *echoNest = [EchoNest new];
-    //NSArray *uris = [echoNest searchSongByLatitude:59.3294 longitude:18.0686];
-    return uris;
+    
+    // Get the songs for our city. This gives us echonest Ids
+    NSArray *songsFromCity = [EchoNest searchArtistByCity:@"stockholm"];
+
+    return songsFromCity;
 }
 
 + (instancetype)sharedAppDelegate {
