@@ -52,8 +52,6 @@
 }
 
 -(NSArray *)getSongsForCity {
-    EchoNest *echoNest = [EchoNest new];
-    
     // Get the songs for our city. This gives us echonest Ids
     NSArray *songsFromCity = [EchoNest searchArtistByCity:@"new york"];
     NSArray* shuffledSongs = [self shuffleSongs:[songsFromCity mutableCopy]];

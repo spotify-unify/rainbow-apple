@@ -25,10 +25,7 @@
     [self updateButton:NO];
     self.navigationController.navigationBar.topItem.title = @"Pilgrim";
     [self.playButtonLabel setText:@"Explore"];
-}
-
-- (void) initializePlayback{
-   
+    [self.city setText:@"Rio De Janeiro"];
 }
 
 - (void)viewDidLoad {
