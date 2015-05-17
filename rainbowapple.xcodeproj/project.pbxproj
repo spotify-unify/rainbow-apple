@@ -27,6 +27,17 @@
 		F361B8591B07732200CB75C0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F361B8581B07732200CB75C0 /* SystemConfiguration.framework */; };
 		F3A5DB831B08B86400EF7AA2 /* CitiesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A5DB821B08B86400EF7AA2 /* CitiesTableViewController.m */; };
 		F3A5DB861B08B92400EF7AA2 /* CityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A5DB851B08B92400EF7AA2 /* CityTableViewCell.m */; };
+		F3DBD8D71B08C52300192DCD /* Barcelona.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3DBD8CC1B08C52300192DCD /* Barcelona.jpg */; };
+		F3DBD8D81B08C52300192DCD /* Copenhagen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3DBD8CD1B08C52300192DCD /* Copenhagen.jpg */; };
+		F3DBD8D91B08C52300192DCD /* Los Angeles.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3DBD8CE1B08C52300192DCD /* Los Angeles.jpg */; };
+		F3DBD8DA1B08C52300192DCD /* Moscow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3DBD8CF1B08C52300192DCD /* Moscow.jpg */; };
+		F3DBD8DB1B08C52300192DCD /* Paris.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3DBD8D01B08C52300192DCD /* Paris.jpg */; };
+		F3DBD8DC1B08C52300192DCD /* Rio De Janeiro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3DBD8D11B08C52300192DCD /* Rio De Janeiro.jpg */; };
+		F3DBD8DD1B08C52300192DCD /* Seoul.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3DBD8D21B08C52300192DCD /* Seoul.jpg */; };
+		F3DBD8DE1B08C52300192DCD /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = F3DBD8D31B08C52300192DCD /* splash.png */; };
+		F3DBD8DF1B08C52300192DCD /* Stockholm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3DBD8D41B08C52300192DCD /* Stockholm.jpg */; };
+		F3DBD8E01B08C52300192DCD /* Sydney.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3DBD8D51B08C52300192DCD /* Sydney.jpg */; };
+		F3DBD8E11B08C52300192DCD /* Tokyo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3DBD8D61B08C52300192DCD /* Tokyo.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +81,17 @@
 		F3A5DB821B08B86400EF7AA2 /* CitiesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitiesTableViewController.m; sourceTree = "<group>"; };
 		F3A5DB841B08B92400EF7AA2 /* CityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityTableViewCell.h; sourceTree = "<group>"; };
 		F3A5DB851B08B92400EF7AA2 /* CityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityTableViewCell.m; sourceTree = "<group>"; };
+		F3DBD8CC1B08C52300192DCD /* Barcelona.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Barcelona.jpg; sourceTree = "<group>"; };
+		F3DBD8CD1B08C52300192DCD /* Copenhagen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Copenhagen.jpg; sourceTree = "<group>"; };
+		F3DBD8CE1B08C52300192DCD /* Los Angeles.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Los Angeles.jpg"; sourceTree = "<group>"; };
+		F3DBD8CF1B08C52300192DCD /* Moscow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Moscow.jpg; sourceTree = "<group>"; };
+		F3DBD8D01B08C52300192DCD /* Paris.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Paris.jpg; sourceTree = "<group>"; };
+		F3DBD8D11B08C52300192DCD /* Rio De Janeiro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Rio De Janeiro.jpg"; sourceTree = "<group>"; };
+		F3DBD8D21B08C52300192DCD /* Seoul.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Seoul.jpg; sourceTree = "<group>"; };
+		F3DBD8D31B08C52300192DCD /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		F3DBD8D41B08C52300192DCD /* Stockholm.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Stockholm.jpg; sourceTree = "<group>"; };
+		F3DBD8D51B08C52300192DCD /* Sydney.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sydney.jpg; sourceTree = "<group>"; };
+		F3DBD8D61B08C52300192DCD /* Tokyo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tokyo.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +118,17 @@
 		041DD6D21B07C599000C40E1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F3DBD8CC1B08C52300192DCD /* Barcelona.jpg */,
+				F3DBD8CD1B08C52300192DCD /* Copenhagen.jpg */,
+				F3DBD8CE1B08C52300192DCD /* Los Angeles.jpg */,
+				F3DBD8CF1B08C52300192DCD /* Moscow.jpg */,
+				F3DBD8D01B08C52300192DCD /* Paris.jpg */,
+				F3DBD8D11B08C52300192DCD /* Rio De Janeiro.jpg */,
+				F3DBD8D21B08C52300192DCD /* Seoul.jpg */,
+				F3DBD8D31B08C52300192DCD /* splash.png */,
+				F3DBD8D41B08C52300192DCD /* Stockholm.jpg */,
+				F3DBD8D51B08C52300192DCD /* Sydney.jpg */,
+				F3DBD8D61B08C52300192DCD /* Tokyo.jpg */,
 				041DD6DB1B07DFE0000C40E1 /* play_w_explore@2x.png */,
 				041DD6E71B08B216000C40E1 /* bg_w_gradient@2x.jpg */,
 				041DD6E31B088FE6000C40E1 /* pause@2x.png */,
@@ -265,15 +298,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3DBD8DD1B08C52300192DCD /* Seoul.jpg in Resources */,
+				F3DBD8DC1B08C52300192DCD /* Rio De Janeiro.jpg in Resources */,
 				041DD6E81B08B216000C40E1 /* bg_w_gradient@2x.jpg in Resources */,
 				F361B8391B0771AD00CB75C0 /* Main.storyboard in Resources */,
 				F361B83E1B0771AD00CB75C0 /* LaunchScreen.xib in Resources */,
 				041DD6DA1B07D8BA000C40E1 /* play@2x.png in Resources */,
+				F3DBD8E11B08C52300192DCD /* Tokyo.jpg in Resources */,
+				F3DBD8DF1B08C52300192DCD /* Stockholm.jpg in Resources */,
 				041DD6E51B088FE6000C40E1 /* pause@2x.png in Resources */,
 				F361B83B1B0771AD00CB75C0 /* Images.xcassets in Resources */,
 				041DD6DC1B07DFE0000C40E1 /* play_w_explore@2x.png in Resources */,
+				F3DBD8DA1B08C52300192DCD /* Moscow.jpg in Resources */,
+				F3DBD8E01B08C52300192DCD /* Sydney.jpg in Resources */,
+				F3DBD8D91B08C52300192DCD /* Los Angeles.jpg in Resources */,
+				F3DBD8DB1B08C52300192DCD /* Paris.jpg in Resources */,
 				041DD6E61B088FE6000C40E1 /* play_wo_explore@2x.png in Resources */,
+				F3DBD8D81B08C52300192DCD /* Copenhagen.jpg in Resources */,
+				F3DBD8DE1B08C52300192DCD /* splash.png in Resources */,
 				041DD6EA1B08B8CA000C40E1 /* plane@2x.png in Resources */,
+				F3DBD8D71B08C52300192DCD /* Barcelona.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

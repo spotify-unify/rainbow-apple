@@ -60,40 +60,40 @@
             [cityData setObject:@"Sweden" forKey:@"country"];
             break;
         case 1:
-            [cityData setObject:@"London" forKey:@"city"];
-            [cityData setObject:@"UK" forKey:@"country"];
+            [cityData setObject:@"Tokyo" forKey:@"city"];
+            [cityData setObject:@"Japan" forKey:@"country"];
             break;
         case 2:
-            [cityData setObject:@"Berlin" forKey:@"city"];
-            [cityData setObject:@"Germany" forKey:@"country"];
+            [cityData setObject:@"Paris" forKey:@"city"];
+            [cityData setObject:@"France" forKey:@"country"];
             break;
         case 3:
-            [cityData setObject:@"Amsterdam" forKey:@"city"];
-            [cityData setObject:@"Netherlands" forKey:@"country"];
+            [cityData setObject:@"Barcelona" forKey:@"city"];
+            [cityData setObject:@"Spain" forKey:@"country"];
             break;
         case 4:
-            [cityData setObject:@"New York" forKey:@"city"];
+            [cityData setObject:@"Seattle" forKey:@"city"];
             [cityData setObject:@"USA" forKey:@"country"];
             break;
         case 5:
-            [cityData setObject:@"Stockholm" forKey:@"city"];
+            [cityData setObject:@"Seoul" forKey:@"city"];
             [cityData setObject:@"Sweden" forKey:@"country"];
             break;
         case 6:
-            [cityData setObject:@"Stockholm" forKey:@"city"];
-            [cityData setObject:@"Sweden" forKey:@"country"];
+            [cityData setObject:@"Sydney" forKey:@"city"];
+            [cityData setObject:@"Australia" forKey:@"country"];
             break;
         case 7:
-            [cityData setObject:@"Stockholm" forKey:@"city"];
-            [cityData setObject:@"Sweden" forKey:@"country"];
+            [cityData setObject:@"Copenhagen" forKey:@"city"];
+            [cityData setObject:@"Denmark" forKey:@"country"];
             break;
         case 8:
-            [cityData setObject:@"Stockholm" forKey:@"city"];
-            [cityData setObject:@"Sweden" forKey:@"country"];
+            [cityData setObject:@"Moscow" forKey:@"city"];
+            [cityData setObject:@"Russia" forKey:@"country"];
             break;
         case 9:
-            [cityData setObject:@"Stockholm" forKey:@"city"];
-            [cityData setObject:@"Sweden" forKey:@"country"];
+            [cityData setObject:@"Rio De Janeiro" forKey:@"city"];
+            [cityData setObject:@"Brazil" forKey:@"country"];
             break;
             
     }

@@ -22,16 +22,17 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self changeBgImage:@"bg_w_gradient.jpg"];
-    [self updateButton:NO];
-    self.navigationController.navigationBar.topItem.title = @"Pilgrim";
-    [self.playButtonLabel setText:@"Explore"];
-    [self.city setText:@"Rio De Janeiro"];
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [self changeBgImage:@"bg_w_gradient.jpg"];
+    [self updateButton:NO];
+    self.navigationController.navigationBar.topItem.title = @"Pilgrim";
+    [self.playButtonLabel setText:@"Explore"];
+    [self.city setText:@"Rio De Janeiro"];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -72,6 +73,13 @@
 }
 
 -(void)citySelected:(NSString *)city {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSString *imagePath = [NSString stringWithFormat:@"%@.jpg", city];
+        UIImage *image = [UIImage imageNamed:imagePath];
+        [self.city setText:city];
+        [self.background setImage:image];
+    });
+    
     [self.navigationController popViewControllerAnimated:YES];
     [[AppDelegate sharedAppDelegate] playSongsForCity:city];
 }
