@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@protocol CitySelectionDelegate <NSObject>
+@required
+- (void) citySelected:(NSString*)city;
+@end
+
+@interface ViewController : UIViewController <CitySelectionDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *background;
 
 
